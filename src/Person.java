@@ -2,13 +2,15 @@ public class Person {
     private String firstName = "Siqi";
     private String lastName = "Thaovangsoua";
 
-    //Empty constructor which makes name default tp "Siqi Herbuin"
+    //Empty constructor which makes name default to "Siqi Thaovangsoua"
     public Person(){}
 
     //Non constructor which makes this.name equal to the parameter name
     public Person(String name){
         this.firstName = name;
+        this.lastName = name;
     }
+    //public (String name){ this.lastName = name; }
 
     /**
      * method headers consist of the following -
@@ -27,15 +29,18 @@ public class Person {
 
     //these are called accessors which will return the name (always returns a variable)
     public String getFirstName() {
-        return this.firstName;
-    }
+        return this.firstName;}
+    public String getLastName() {
+        return this.lastName; }
 
     //these are called mutators which will update the name (never returns a variable)
     public void setFirstName(String newName) {
         this.firstName = newName;
     }
+    public void setLastName(String newName) {this.lastName = newName; }
 
     public String getFullName(){
         return this.firstName + " " + this.lastName;
     }
+
 }
