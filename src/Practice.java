@@ -1,18 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Practice {
     public static void main(String[]args){
-        //Person variableName = new Person("actual name")
-        Person personOne = new Person ("Shaqing");
-        Person personLast = new Person ("Herubin");
-        Person defaultPerson = new Person();
+        List<String> seanList = new ArrayList();
+        List<String> victorList = new ArrayList();
 
-        System.out.println("Person default is: " + defaultPerson.getFullName());
-        System.out.println("Person 1 is: " + personOne.getFullName());
+        for(int i = 0; i < 10; i++){
+            seanList.add("sean android #: " + (i + 1)); //add to list
+            victorList.add("victor clone #: " + (i + 1));
+        }
 
-        //Change it from Shaqing Herubin to Droluc Thao
-        personOne.setFirstName("Droluc");
-        personOne.setLastName("Thao");
+        printItems(seanList);
+        printItems(victorList);
+    }
 
-
-        System.out.println("Person 1 now is: " + personOne.getFullName());
+    public static void printItems(List<String> list){
+        for(int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i)); //print out right away
+        }
     }
 }
